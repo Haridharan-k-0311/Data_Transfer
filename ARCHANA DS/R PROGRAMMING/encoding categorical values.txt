@@ -1,0 +1,31 @@
+ data<-data.frame(
+gender=c("male","female","female","male","female"),
+education=c("bachelor","master","high school","master","bachelor"),
+age=c(23,25,22,28,24)
+)
+print(data)
+class(data$gender)
+class(data$education)
+class(data$age)
+data_cpy<-data
+data_cpy$gender<-as.factor(data_cpy$gender)
+class(data_cpy$gender)
+levels(data_cpy$gender)
+data_cpy$gender<-as.integer(data_cpy$gender)
+class(data_cpy$gender)
+print(data_cpy)
+data_cpy$education<-factor(data_cpy$education,levels=c("high school","bachelor","master"),ordered=TRUE)
+class(data_cpy$education)
+levels(data_cpy$education)
+data_cpy$education<-as.integer(data_cpy$education)
+class(data_cpy$education)
+print(data_cpy)
+data_cpy2<-data
+install.packages("caret")
+library(caret)
+dummies<-dummyVars(~gender+education data=data_cpy2)
+encoded_data<-predict(dummies,newdata=data_)cpy2)
+encoded_data<-data.frame(encoded_data,data$age)
+print(encoded_data)
+
+

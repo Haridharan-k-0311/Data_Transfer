@@ -1,0 +1,27 @@
+ARITHMETIC OPERATIONS:
+print("arithmetic operations !!!")
+print("enter numbers:")
+a=int(input(" "))
+b=int(input(" "))
+print("addition :",a+b)
+print("subtraction:",a-b)
+print("multiplication :",a*b)
+print("division:",a/b)
+
+CONTROL STATEMENTS:
+Looping:
+
+print("looping statements!!")
+items=["pencil","eraser","sharpener","ruler","ink pen"]
+for i in items:
+    print(list(i))
+for i in range(1,50,5):
+    print(i)
+count=0
+while(count<=5):
+    print("countdown",count)
+    count+=1
+else:
+    print("the number is incorrect")
+
+Branching:

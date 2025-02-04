@@ -1,0 +1,28 @@
+name=c("juan","alcaraz","simantha")
+age=c(22,15,19)
+dataframe1<-data.frame(name,age)
+print(dataframe1)
+str(dataframe1)
+print(dataframe1[1])
+print(dataframe1[["age"]])
+print(dataframe1$name)
+dataframe2<-data.frame(
+name=c("yiruma","bach"),
+age=c(46,89)
+)
+updated<-rbind(dataframe1,dataframe2)
+print(updated)
+dataframe3<-data.frame(hobby=c('tennis','reading','dance','reading','tennis'))
+updated<-cbind(updated,dataframe3)
+updated
+cat('total records=',length(updated),"\n")
+cat('no of rows& columns=',dim(updated),"\n")
+print(str(updated))
+sel_data<-subset(updated,age<50)
+print(sel_data)
+sel_data<-subset(updated,hobby!='tennis')
+print(sel_data)
+instal.packages(dplyr)
+library(dplyr)
+sel_data<-select(updated,-hobby)
+sel_data
